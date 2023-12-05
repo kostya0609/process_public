@@ -1,0 +1,5 @@
+export const ACTIVE_PROCESS_TYPE = {
+	CREATED: 1,
+	COMPLETED: 2,
+	NOT_CREATED: 3,
+};

@@ -1,0 +1,138 @@
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'white': #ffffff,
+    'black': #000000,
+    //'primary': (
+    //  'base': #3bc8f5,
+    //),
+    //'success': (
+    //  'base': #3bc8f5,
+    //),
+    //'warning': (
+    //  'base': #e6a23c,
+    //),
+    //'danger': (
+    //  'base': #f56c6c,
+    //),
+    //'error': (
+    //  'base': #f56c6c,
+    //),
+    //'info': (
+    //  'base': #3bc8f5,
+    //),
+  ),
+  $breakpoints: (
+  'xs': '(max-width: #{'639.99px'})',
+  'sm': '(min-width: #{'640px'})',
+  'md': '(min-width: #{'768px'})',
+  'lg': '(min-width: #{'1024px'})',
+  'xl': '(min-width: #{'1280px'})',
+  '2xl': '(min-width: #{'1536px'})',
+  ),
+  //$border-radius: (
+  //  'base': 6px
+  //),
+  //$font-family: (
+  //  '':
+  //    "'Stolzlregular'"
+  //),
+  //$button-padding-horizontal: (
+  //  'default':''
+  //),
+  //$input-height: (
+  //  'default': ''
+  //),
+  //$input-line-height: (
+  //  'default': 3.4em
+  //),
+  //$common-component-size: (
+  //  'large':48px
+  //),
+  //$card: (
+  //  'border-radius':20px
+  //),
+  //$radio-bordered-input-width: (
+  //  'large':24px
+  //),
+  //$radio-bordered-input-height: (
+  //  'large':24px
+  //)
+
+);
+
+@use "element-plus/theme-chalk/src/index.scss" as *;
+
+/* ниже стили общие на все приложение*/
+#workarea {
+  overflow-x: hidden!important;
+}
+#workarea-content {
+  &__www{}
+  overflow: unset !important;
+}
+.workarea-content-paddings{
+  overflow-x: unset !important;
+}
+#app ::selection {
+  background: #cfcfcf;
+}
+*, :after, :before {
+  box-sizing: content-box;
+}
+
+
+/*чтоб в таблицах переносились слова*/
+.el-table .cell{
+  word-break: break-word!important;
+}
+
+.el-icon--close-tip {
+  display: none!important;;
+}
+
+.badgeItem {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 10;
+  color: white;
+  background: #f56c6c;
+  border-radius: 20px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px!important;
+  width: 25px;
+  height: 25px;
+}
+
+.el-button--primary {
+  --el-button-disabled-bg-color: #CCC;
+  --el-button-disabled-border-color: #CCC;
+}
+.el-button.el-button--primary {
+  background: #3bc8f5 !important;
+  border-color: #3bc8f5 !important;
+  color: #fff !important;
+
+  &:hover {
+    background: #3fddff !important;
+  }
+}
+
+.el-button--primary.el-button.is-text {
+  color: #3bc8f5 !important;
+  border: 0 solid transparent !important;
+  background-color: transparent !important;
+
+  &:hover {
+    background:  var(--el-fill-color-light) !important;
+  }
+}
+
+.el-card__header{
+  padding: 5px 10px !important;
+}
+
+
